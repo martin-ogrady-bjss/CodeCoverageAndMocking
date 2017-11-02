@@ -1,0 +1,39 @@
+
+public class StringChecker
+{
+	StringCheckService stringCheckService;
+	
+	public StringChecker()
+	{
+		this.stringCheckService = NetworkStringCheckService.getInstance();
+	}
+
+
+	public boolean isGoodString(String s)
+	{
+		if(s == null)
+		{
+			return false;
+		}
+		else if(s.contains(" "))
+		{
+			return false;
+		}
+		else if(s.startsWith("svc:"))
+		{
+			try
+			{
+				return stringCheckService.isGoodString(s.substring(4));
+			}
+			catch(Exception ex)
+			{
+				ex.printStackTrace();
+				return false;
+			}
+		}
+		else
+		{
+			return true;
+		}
+	}
+}
