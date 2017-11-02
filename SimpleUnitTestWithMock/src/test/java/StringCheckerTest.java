@@ -27,7 +27,7 @@ public class StringCheckerTest
 		assertFalse(checker.isGoodString(null));
 	}
 
-/*
+
 	@Test
 	public void testServiceCheck()
 	{
@@ -36,8 +36,8 @@ public class StringCheckerTest
 		assertTrue(checker.isGoodString("svc:"));
 		assertFalse(checker.isGoodString("svc:abc def"));
 	}
-*/
 
+/*
 	@Test
 	public void testServiceCheck()
 	{
@@ -75,4 +75,5 @@ public class StringCheckerTest
 		assertFalse(checker.isGoodString("svc:abc def"));
 		assertFalse(checker.isGoodString("svc:blacklistedString"));
 	}
+*/
 }

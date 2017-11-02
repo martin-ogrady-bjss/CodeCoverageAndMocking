@@ -35,7 +35,7 @@ public class StringCheckerTest
 		StringCheckService stringCheckServiceMock = EasyMock.createNiceMock(StringCheckService.class);
 		EasyMock.expect(stringCheckServiceMock.isGoodString("abc")).andReturn(true);
 		EasyMock.expect(stringCheckServiceMock.isGoodString("")).andReturn(true);
-		// EasyMock.expect(stringCheckServiceMock.isGoodString("abc def")).andReturn(false);
+		 EasyMock.expect(stringCheckServiceMock.isGoodString("abc def")).andReturn(false);
 		EasyMock.expect(stringCheckServiceMock.isGoodString("blacklistedString")).andReturn(false);
 
 		EasyMock.replay(stringCheckServiceMock);

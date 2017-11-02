@@ -19,11 +19,12 @@ public class StringCheckerTest
 		assertFalse(checker.isGoodString("abc def"));
 	}
 
-	
-//	@Test
-//	public void testNullString()
-//	{
-//		StringChecker checker = new StringChecker();
-//		assertFalse(checker.isGoodString(null));
-//	}
+/*	
+	@Test
+	public void testNullString()
+	{
+		StringChecker checker = new StringChecker();
+		assertFalse(checker.isGoodString(null));
+	}
+*/
 }
