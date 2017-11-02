@@ -1,10 +1,12 @@
 
 public class StringChecker
 {
+/*
 	public void dummy()
 	{
 		return;
 	}
+*/
 	
 	public boolean isGoodString(String s)
 	{
