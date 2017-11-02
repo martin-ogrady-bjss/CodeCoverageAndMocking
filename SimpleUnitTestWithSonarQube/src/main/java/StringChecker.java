@@ -1,12 +1,17 @@
 
 public class StringChecker
 {
-/*
-	public void dummy()
+	StringCheckService stringCheckService;
+	
+	public StringChecker()
 	{
-		return;
+		this(new NetworkStringCheckService());
 	}
-*/
+	
+	public StringChecker(StringCheckService stringCheckService)
+	{
+		this.stringCheckService = stringCheckService;
+	}
 	
 	public boolean isGoodString(String s)
 	{
@@ -17,6 +22,18 @@ public class StringChecker
 		else if(s.contains(" "))
 		{
 			return false;
+		}
+		else if(s.startsWith("svc:"))
+		{
+			try
+			{
+				return stringCheckService.isGoodString(s.substring(4));
+			}
+			catch(Exception ex)
+			{
+				ex.printStackTrace();
+				return false;
+			}
 		}
 		else
 		{
