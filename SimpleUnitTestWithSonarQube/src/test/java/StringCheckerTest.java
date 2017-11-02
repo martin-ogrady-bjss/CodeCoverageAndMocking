@@ -20,6 +20,7 @@ public class StringCheckerTest
 		assertFalse(checker.isGoodString("abc def"));
 	}
 
+/*	
 	@Test
 	public void testNullString()
 	{
@@ -49,7 +50,7 @@ public class StringCheckerTest
 		EasyMock.reset(stringCheckServiceMock);
 	}
 
-/*
+
 	@Test
 	public void testServiceCheckWhenNullThrown() throws Exception
 	{
